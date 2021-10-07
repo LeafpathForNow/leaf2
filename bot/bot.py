@@ -5,12 +5,13 @@
 import discord
 from discord.ext import commands
 import asyncio
-token = os.environ.get('leaf2') # fetch the token from Heroku's "OS" running the bot. make sure the name matches the one you've used on Heroku
+import os # import the OS details, including our hidden bot token
+leaf2 = os.environ.get('leaf2') # fetch the token from Heroku's "OS" running the bot. make sure the name matches the one you've used on Heroku
 client = discord.Client()
 
 bot = commands.Bot(command_prefix='Leaf.')
 
-import os # import the OS details, including our hidden bot token
+
 
 async def my_background_task():
     await client.wait_until_ready() # ensures cache is loaded
