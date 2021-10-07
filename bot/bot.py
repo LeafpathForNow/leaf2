@@ -8,7 +8,7 @@ import asyncio
 
 client = discord.Client()
 
-bot = commands.Bot()
+bot = commands.Bot(command_prefix='Leaf.')
 
 import os # import the OS details, including our hidden bot token
 token = os.environ.get('leaf2') # fetch the token from Heroku's "OS" running the bot. make sure the name matches the one you've used on Heroku
