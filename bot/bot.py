@@ -19,4 +19,4 @@ async def on_ready():
     client.loop.create_task(my_background_task()) # best to put it in here
 
 # Include this at the end of your code. Instead of bot, you may have "discord.Client()" "commands.Bot()" etc, or whatever you have defined these.
-client.run(token) # make sure your token variable matches the token defined above
+client.run(leaf2) # make sure your token variable matches the token defined above
