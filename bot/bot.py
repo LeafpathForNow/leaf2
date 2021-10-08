@@ -14,17 +14,13 @@ bot = commands.Bot(command_prefix='Leaf.')
 
 
 async def my_background_task():
-    await client.wait_until_ready() # ensures cache is loaded
-    counter = 0
-    channel = client.get_channel(id=895809139006132277) # replace with target channel id
-    while not client.is_closed():
-        counter += 1
-        await channel.send(s.fish)
-        await asyncio.sleep(300) # or 300 if you wish for it to be 5 minutes
+    channel = client.get_channel(895809139006132277) # replace with target channel id
+    await channel.send(s.fish)
+    await asyncio.sleep(300) # or 300 if you wish for it to be 5 minutes
 
 @client.event
 async def on_ready():
-    client.loop.create_task(my_background_task()) # best to put it in here
+    bot.loop.create_task(my_background_task())
 
 # Include this at the end of your code. Instead of bot, you may have "discord.Client()" "commands.Bot()" etc, or whatever you have defined these.
 client.run(leaf2) # make sure your token variable matches the token defined above
