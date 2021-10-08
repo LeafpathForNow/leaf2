@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix='Leaf.')
 
 async def my_background_task():
     channel = client.get_channel(895809139006132277) # replace with target channel id
-    await channel.send(s.fish)
+    await channel.send("s.fish")
     await asyncio.sleep(300) # or 300 if you wish for it to be 5 minutes
 
 @client.event
